@@ -23,7 +23,7 @@ class Vlang < Formula
   depends_on "bdw-gc"
   # `v sqlite` and the new-in-0.5.2 `v bug` tool import `db.sqlite`, whose C
   # header is gated on `$pkgconfig('sqlite3')`. Provide sqlite3.pc so it builds.
-  depends_on "sqlite"
+  uses_from_macos "sqlite"
 
   conflicts_with "v", because: "both install `v` binaries"
 
